@@ -6,8 +6,15 @@ lowercase letters, and underscores connecting the words.
 return the entire array with the converted strings
 */
 const snakeCaseArr = function (arr) {
-    // your code here. 
-}
+    var newArray = []
+  
+    for(var i = 0; i < arr.length; i++) {
+      var word = arr[i].toLowerCase().split(' ').join('_')
+      newArray.push(word)
+    }
+  
+    return newArray
+  }
 
 console.log((snakeCaseArr(['Coding Is Fun']) === ['coding_is_fun']) ? "Test 1: Passing" : "Test 1: Failing");
 

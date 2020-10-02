@@ -9,8 +9,21 @@ what it does and why.
 */
 
 const kebabCase = function (str) {
-    // your code here
-}
+        if(str === '') {   //conditional about if the string is empty, returns the string telling this
+          return 'This is an empty string!'
+        }
+      
+        const newWords = [] 
+        const words = str.split(' ') //Splitting the string 
+      
+        for(var i = 0; i < words.length; i++) { //Iniciating the for loop
+          var newWord = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase() //Setting a new variable separating what is Uppercase and what is not.
+          newWords.push(newWord) // Using push to create the new array
+        }
+      
+        return newWords.join('-') //Returns join to put everything together
+      }
+
 
 console.log((kebabCase('Coding Is Fun') === 'Coding-Is-Fun') ? "Test 1: Passing" : "Test 1: Failing");
 

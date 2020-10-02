@@ -4,8 +4,15 @@ ex. [2, 3, 5, [1, 2], [3]] ---> 16
 */
 
 const sumNestedArray = function (arr) {
-
-}
+    var flattenArray = arr.flat()
+    var finalNumber = 0
+  
+    for(var i = 0; i < flattenArray.length; i++) {
+      finalNumber += flattenArray[i]
+    }
+    
+    return finalNumber
+  }
 
 console.log((sumNestedArray([1, [2, 3, 4], 6, 7, 5]) === 28) ? "Test 1: Passing" : "Test 1: Failing");
 

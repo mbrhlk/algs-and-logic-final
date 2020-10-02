@@ -5,12 +5,21 @@
 // return the changed array. 
 
 const addSAnd20 = function (arr) {
-    // your code here
-}
+        var finalArray = []
+      
+        for(var i = 0; i < arr.length; i++) {
+          if(isNaN(arr[i])) {
+            finalArray.push(arr[i] + 's')
+          } else {
+            finalArray.push(arr[i] + 20)
+          }
+        }
+      
+        return finalArray
+      }
+      
 
 
 console.log((addSAnd20([56, 'dog', 'apple', 'cheese', 45, 71]) === [76, 'dogs', 'apples', 'cheeses', 65, 91]) ? "Test 1: Passing" : "Test 1: Failing");
-
-console.log((addSAnd20([56, 45, 71, 90, 28, 67]) === [76, 65, 91, 110, 48, 87]) ? "Test 2: Passing" : "Test 2: Failing");
-
-console.log((addSAnd20(['dog', 'apple', 'cheese']) === ['dogs', 'apples', 'cheeses']) ? "Test 3: Passing" : "Test 3: Failing");
+console.log((addSAnd20([56, 45, 71, 90, 28, 67]) === [76, 65, 91, 110, 48, 87])
+console.log((addSAnd20(['dog', 'apple', 'cheese']) === ['dogs', 'apples', 'cheeses'])
